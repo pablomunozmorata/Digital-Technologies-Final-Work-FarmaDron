@@ -1,0 +1,22 @@
+#orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orders-table th, #orders-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#orders-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#orders-table th {
+    background-color: #004d40;
+    color: white;
+}
+
+
+

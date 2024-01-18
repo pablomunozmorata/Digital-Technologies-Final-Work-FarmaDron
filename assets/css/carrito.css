@@ -1,0 +1,129 @@
+/* Estilos para el ícono del carrito y el badge de cantidad */
+#cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+#cart-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: #FF4136;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+}
+
+/* Estilos para el panel desplegable del carrito */
+.cart-dropdown {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 35px; /* Ajusta según sea necesario para posicionar correctamente el carrito */
+    right: 0; /* Alinea el panel a la derecha del ícono del carrito */
+    width: 700px;
+    height: 500px; /* Altura más larga */
+    background-color: rgb(244, 246, 246);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    overflow-y: auto; /* Agrega scroll vertical si el contenido es muy largo */
+    overflow-x: hidden; /* Previene el desbordamiento horizontal */
+}
+
+
+/* Estilos para la imagen del producto */
+#cart-panel #cart-items img {
+    width: 150px; /* o puedes establecer un ancho fijo, como 100px */
+    max-width: 100%; /* Asegura que la imagen sea responsive y no exceda el ancho del contenedor */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    max-height: 150px; /* Ajusta esto para cambiar la altura máxima de las imágenes */
+}
+
+
+/* Estilos para el nombre y detalles del producto */
+.cart-item h4 {
+    font-size: 1.1rem; /* Tamaño más grande para el nombre del producto */
+    margin-bottom: 5px; /* Espacio entre el nombre y los detalles */
+}
+
+.cart-item-details {
+    display: flex;
+    justify-content: space-between; /* Separa los elementos de detalle */
+    width: 100%;
+}
+
+.cart-item-details .quantity {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cart-item-details .price {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para el precio */
+    color: #333;
+    font-weight: bold; /* Negrita para resaltar */
+}
+
+.cart-item-quantity-select {
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    padding: 5px;
+    width: 60px; /* O el ancho que desees */
+    -webkit-appearance: none; /* Remueve el estilo predeterminado en WebKit browsers */
+    -moz-appearance: none; /* Remueve el estilo predeterminado en Firefox */
+    appearance: none; /* Remueve el estilo predeterminado */
+    background: url('path_to_your_down_arrow_icon') no-repeat right center;
+    background-size: 20px; /* Tamaño de tu icono de flecha */
+  }
+  
+  /* Es posible que necesites estilos específicos para diferentes navegadores para eliminar por completo el estilo predeterminado de select */
+  
+
+.remove-item {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+
+/* Estilos adicionales para mejorar la usabilidad general */
+.cart-dropdown {
+    /* ... tus estilos existentes ... */
+    padding: 20px; /* Espacio adicional dentro del panel del carrito */
+}
+
+/* Ajuste del espacio entre ítems del carrito */
+.cart-item {
+    padding: 20px 10px;
+}
+
+/* Ajustes para el diseño responsivo */
+@media (max-width: 768px) {
+    .cart-dropdown {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+}
+
+
+#checkout-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#checkout-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
