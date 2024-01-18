@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Administrator Page - Orders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/carrito.css">
+    <link rel="stylesheet" href="assets/css/admin_pedidos.css">
+
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+    
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="assets/img/logo.png" alt="Logo FARMADRON" style="height: 125px;">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="home.html">
+                FARMADRON
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_menu.html">MENU </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_pedidos.html">ORDERS PLACED </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_stock.html">STOCK </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_estadisticas.html">STATISTICS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_activity.html">ACTIVITY </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+            <h1>Orders placed</h1>
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>ID Customer</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Requested Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos de producto 35 -->
+                    <tr>
+                        <td>256</td>
+                        <td>12/12/2023 22:37</td>
+                        <td>[41.7407, -2.4843]</td>
+                        <td>Apiretal 500mg x 3</td>
+                    </tr>
+                    <!-- Datos de producto 34 -->
+                    <tr>
+                        <td>189</td>
+                        <td>12/12/2023 20:13</td>
+                        <td>[41.7426, -2.4673]</td>
+                        <td>Propalgina plus, powder for oral solution x 2</td>
+                    </tr>
+                    <!-- Datos de producto 33 -->
+                    <tr>
+                        <td>42</td>
+                        <td>12/12/2023 19:44</td>
+                        <td>[41.7788, -2.4271]</td>
+                        <td>Paracetamol Tecnimide 500mg x 4</td>
+                    </tr>
+                    <!-- Datos de producto 32 -->
+                    <tr>
+                        <td>78</td>
+                        <td>12/12/2023 17:34</td>
+                        <td>[41.7858, -2.4915]</td>
+                        <td>IlviGrip Expectorant, 10 sachets x 5</td>
+                    </tr>
+                    <!-- Datos de producto 31 -->
+                    <tr>
+                        <td>156</td>
+                        <td>12/12/2023 17:19</td>
+                        <td>[41.7412, -2.4316]</td>
+                        <td>Paracetamol Tecnimide 500mg x 5</td>
+                    </tr>
+                    <!-- Datos de producto 30 -->
+                    <tr>
+                        <td>287</td>
+                        <td>12/12/2023 13:36</td>
+                        <td>[41.7525, -2.4416]</td>
+                        <td>Couldina instant, 20 sachets x 5</td>
+                    </tr>
+                    <!-- Datos de producto 29 -->
+                    <tr>
+                        <td>99</td>
+                        <td>12/12/2023 12:52</td>
+                        <td>[41.7425, -2.4969]</td>
+                        <td>Propalgina plus, powder for oral solution x 2</td>
+                    </tr>
+                    <!-- Datos de producto 28 -->
+                    <tr>
+                        <td>35</td>
+                        <td>12/12/2023 11:24</td>
+                        <td>[41.7551, -2.4952]</td>
+                        <td>Paracetamol Bayer x 4</td>
+                    </tr>
+                    <!-- Datos de producto 27 -->
+                    <tr>
+                        <td>200</td>
+                        <td>12/12/2023 10:56</td>
+                        <td>[41.7333, -2.5082]</td>
+                        <td>Remidol granules, 650mg x 1</td>
+                    </tr>
+                    <!-- Datos de producto 26 -->
+                    <tr>
+                        <td>35</td>
+                        <td>12/12/2023 10:13</td>
+                        <td>[41.7175, -2.5017]</td>
+                        <td>Paracetamol Tecnimide 500mg x 5</td>
+                    </tr>
+                    <!-- Datos de producto 25 -->
+                    <tr>
+                        <td>222</td>
+                        <td>12/12/2023 09:48</td>
+                        <td>[41.7582, -2.4551]</td>
+                        <td>Paracetamol Bayer x 4</td>
+                    </tr>
+                    <!-- Datos de producto 24 -->
+                    <tr>
+                        <td>98</td>
+                        <td>12/12/2023 09:31</td>
+                        <td>[41.7553, -2.5038]</td>
+                        <td>Paracetamol Tecnimide 500mg x 1</td>
+                    </tr>
+                    <!-- Datos de producto 23 -->
+                    <tr>
+                        <td>201</td>
+                        <td>12/12/2023 09:23</td>
+                        <td>[41.7287, -2.4376]</td>
+                        <td>Apiretal 500mg x 2</td>
+                    </tr>
+                    <!-- Datos de producto 22 -->
+                    <tr>
+                        <td>195</td>
+                        <td>12/12/2023 08:16</td>
+                        <td>[41.7723, -2.4589]</td>
+                        <td>Paracetamol Bayer x 1</td>
+                    </tr>
+                    <!-- Datos de producto 21 -->
+                    <tr>
+                        <td>149</td>
+                        <td>12/12/2023 07:46</td>
+                        <td>[41.7890, -2.4996]</td>
+                        <td>Propalgina plus, powder for oral solution x 1</td>
+                    </tr>
+                    <!-- Datos de producto 20 -->
+                    <tr>
+                        <td>277</td>
+                        <td>12/12/2023 06:55</td>
+                        <td>[41.8011, -2.5039]</td>
+                        <td>Remidol granules, 650mg x 2</td>
+                    </tr>
+                    <!-- Datos de producto 19 -->
+                    <tr>
+                        <td>44</td>
+                        <td>11/12/2023 23:24</td>
+                        <td>[41.7193, -2.4524]</td>
+                        <td>Apiretal 500mg x 4</td>
+                    </tr>
+                    <!-- Datos de producto 18 -->
+                    <tr>
+                        <td>281</td>
+                        <td>11/12/2023 21:57</td>
+                        <td>[41.7324, -2.4443]</td>
+                        <td>Salvarine, oral x 5</td>
+                    </tr>
+                    <!-- Datos de producto 17 -->
+                    <tr>
+                        <td>47</td>
+                        <td>11/12/2023 20:34</td>
+                        <td>[41.7261, -2.4906]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                    <!-- Datos de producto 16 -->
+                    <tr>
+                        <td>195</td>
+                        <td>11/12/2023 18:00</td>
+                        <td>[41.7648, -2.5015]</td>
+                        <td>Couldina instant, 20 sachets x 1</td>
+                    </tr>
+                    <!-- Datos de producto 15 -->
+                    <tr>
+                        <td>274</td>
+                        <td>11/12/2023 17:53</td>
+                        <td>[41.7605, -2.5024]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                    <!-- Datos de producto 14 -->
+                    <tr>
+                        <td>215</td>
+                        <td>11/12/2023 16:38</td>
+                        <td>[41.7611, -2.4794]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                    <!-- Datos de producto 13 -->
+                    <tr>
+                        <td>12</td>
+                        <td>11/12/2023 15:43</td>
+                        <td>[41.7691, -2.4159]</td>
+                        <td>Couldina instant, 20 sachets x 1</td>
+                    </tr>
+                    <!-- Datos de producto 12 -->
+                    <tr>
+                        <td>263</td>
+                        <td>11/12/2023 15:20</td>
+                        <td>[41.7688, -2.5082]</td>
+                        <td>IlviGrip Expectorant, 10 sachets x 3</td>
+                    </tr>
+                    <!-- Datos de producto 11 -->
+                    <tr>
+                        <td>205</td>
+                        <td>11/12/2023 15:03</td>
+                        <td>[41.7674, -2.4749]</td>
+                        <td>Remidol granules, 650mg x 5</td>
+                    </tr>
+                    <!-- Datos de producto 10 -->
+                    <tr>
+                        <td>84</td>
+                        <td>11/12/2023 13:56</td>
+                        <td>[41.7255, -2.4905]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                    <!-- Datos de producto 9 -->
+                    <tr>
+                        <td>266</td>
+                        <td>11/12/2023 13:00</td>
+                        <td>[41.7408, -2.4748]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                    <!-- Datos de producto 8 -->
+                    <tr>
+                        <td>178</td>
+                        <td>11/12/2023 12:15</td>
+                        <td>[41.7950, -2.4335]</td>
+                        <td>Frenadol Forte granulated 10 sachets x 2</td>
+                    </tr>
+                    <!-- Datos de producto 7 -->
+                    <tr>
+                        <td>125</td>
+                        <td>11/12/2023 11:25</td>
+                        <td>[41.7957, -2.4541]</td>
+                        <td>Apiretal 500mg x 5</td>
+                    </tr>
+
+                     <!-- Datos de producto 5 -->
+                     <tr>
+                        <td>231</td>
+                        <td>11/12/2023 11:22</td>
+                        <td>[41.7282, -2.4846]</td>
+                        <td>Frenadol Forte granulated 10 sachets x 5</td>
+                    </tr>
+
+                    <!-- Datos de producto 6 -->
+                    <tr>
+                        <td>184</td>
+                        <td>11/12/2023 11:00</td>
+                        <td>[41.7710, -2.4801]</td>
+                        <td>Couldina instant, 20 sachets x 3</td>
+                    </tr>
+                   
+                    <!-- Datos de producto 4 -->
+                    <tr>
+                        <td>47</td>
+                        <td>11/12/2023 09:53</td>
+                        <td>[41.7682, -2.4497]</td>
+                        <td>Apiretal 500mg x 3</td>
+                    </tr>
+                    <!-- Datos de producto 3 -->
+                    <tr>
+                        <td>137</td>
+                        <td>11/12/2023 09:15</td>
+                        <td>[41.7403, -2.4193]</td>
+                        <td>IlviGrip Expectorant, 10 sachets x 5</td>
+                    </tr>
+                    <!-- Datos de producto 2 -->
+                    <tr>
+                        <td>54</td>
+                        <td>11/12/2023 06:54</td>
+                        <td>[41.7857, -2.5141]</td>
+                        <td>Propalgina plus, powder for oral solution x 2</td>
+                    </tr>
+                    <!-- Datos de producto 1 -->
+                    <tr>
+                        <td>187</td>
+                        <td>11/12/2023 06:00</td>
+                        <td>[41.7408, -2.4748]</td>
+                        <td>Salvarine, oral x 3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    
+
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    
+
+    
+    
+    
+</footer>
+<!-- End Footer -->
+
+<!-- Start Script -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/templatemo.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- End Script -->
+
+<!-- Start Slider Script -->
+<script src="assets/js/slick.min.js"></script>
+<script>
+    $('#carousel-related-product').slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        dots: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            }
+        ]
+    });
+</script>
+<!-- End Slider Script -->
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/carrocompra.js"></script>
+<script src="assets/js/server.js"></script>
+
+<div class="w-100 bg-black py-3">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-left text-light">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">HOME</a>
+                    </li>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Administrador - Productos en Stock</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/carrito.css">
+    <link rel="stylesheet" href="assets/css/admin_pedidos.css">
+    <link rel="stylesheet" href="assets/css/admin_stock.css">
+
+
+
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+    
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="assets/img/logo.png" alt="Logo FARMADRON" style="height: 125px;">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="home.html">
+                FARMADRON
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_menu.html">MENU </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_pedidos.html">ORDERS PLACED </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_stock.html">STOCK </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_estadisticas.html">STATISTICS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_activity.html">ACTIVITY </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Tabla de Productos -->
+    <h1>Stock</h1>
+<table class="product-table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Producto 1 -->
+        <tr>
+            <td><img src="assets/img/shop_01.jpg" alt="Frenadol Forte"></td>
+            <td>Frenadol Forte granulated 10 sachets</td>
+            <td>Cold-and-Flu</td>
+            <td>12.00€</td>
+            <td>20 units</td>
+        </tr>
+        <!-- Producto 2 -->
+        <tr>
+            <td><img src="assets/img/shop_02.jpg" alt="Paracetamol Bayer"></td>
+            <td>Paracetamol Bayer</td>
+            <td>Pain-Relief</td>
+            <td>15.00€</td>
+            <td>15 units</td>
+        </tr>
+        <!-- Producto 3 -->
+        <tr>
+            <td><img src="assets/img/shop_03.jpg" alt="IlviGrip Expectorant"></td>
+            <td>IlviGrip Expectorant, 10 sachets</td>
+            <td>Cold-and-Flu</td>
+            <td>11.95€</td>
+            <td>25 units</td>
+        </tr>
+        <!-- Producto 4 -->
+        <tr>
+            <td><img src="assets/img/shop_04.jpg" alt="Paracetamol Tecnimide 500mg"></td>
+            <td>Paracetamol Tecnimide 500mg</td>
+            <td>Pain-Relief</td>
+            <td>7.00€</td>
+            <td>30 units</td>
+        </tr>
+        <!-- Producto 5 -->
+        <tr>
+            <td><img src="assets/img/shop_05.jpg" alt="Remidol granules, 650mg"></td>
+            <td>Remidol granules, 650mg</td>
+            <td>Pain-Relief</td>
+            <td>20.00€</td>
+            <td>10 units</td>
+        </tr>
+        <!-- Producto 6 -->
+        <tr>
+            <td><img src="assets/img/shop_06.jpg" alt="Propalgina plus, powder for oral solution"></td>
+            <td>Propalgina plus, powder for oral solution</td>
+            <td>Cold-and-Flu</td>
+            <td>9.00€</td>
+            <td>20 units</td>
+        </tr>
+        <!-- Producto 7 -->
+        <tr>
+            <td><img src="assets/img/shop_07.jpg" alt="Apiretal 500mg"></td>
+            <td>Apiretal 500mg</td>
+            <td>Pain-Relief</td>
+            <td>13.50€</td>
+            <td>15 units</td>
+        </tr>
+        <!-- Producto 8 -->
+        <tr>
+            <td><img src="assets/img/shop_08.jpg" alt="Couldina instant, 20 sachets"></td>
+            <td>Couldina instant, 20 sachets</td>
+            <td>Cold-and-Flu</td>
+            <td>21.30€</td>
+            <td>5 units</td>
+        </tr>
+        <!-- Producto 9 -->
+        <tr>
+            <td><img src="assets/img/shop_09.jpg" alt="Salvarine, oral"></td>
+            <td>Salvarine, oral</td>
+            <td>Oral-Care</td>
+            <td>30.00€</td>
+            <td>8 units</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    
+
+    
+    
+</footer>
+<!-- End Footer -->
+
+<!-- Start Script -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/templatemo.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- End Script -->
+
+<!-- Start Slider Script -->
+<script src="assets/js/slick.min.js"></script>
+<script>
+    $('#carousel-related-product').slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        dots: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            }
+        ]
+    });
+</script>
+<!-- End Slider Script -->
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/carrocompra.js"></script>
+<script src="assets/js/server.js"></script>
+
+<div class="w-100 bg-black py-3">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-left text-light">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">HOME</a>
+                    </li>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
