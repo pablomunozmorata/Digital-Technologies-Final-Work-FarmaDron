@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Administrator Page - Activity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/carrito.css">
+    <link rel="stylesheet" href="assets/css/admin_pedidos.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <!-- Leaflet JS -->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+</head>
+
+
+<body>
+    
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <img src="assets/img/logo.png" alt="Logo FARMADRON" style="height: 125px;">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="home.html">
+                FARMADRON
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_menu.html">MENU </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_pedidos.html">ORDERS PLACED </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_stock.html">STOCK </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_estadisticas.html">STATISTICS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_activity.html">ACTIVITY </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+<div class="container">
+    <div id="map" class="map-container" style="height: 600px;"></div>
+    
+    <div class="drones-info">
+        <h3>Drone Information</h3>
+        <p><strong>Drone 1:</strong> At rest in the farmacy, charging (Battery at 32%)</p>
+        <p><strong>Drone 2:</strong> At rest in the farmacy, ready (Battery at 100%)</p>
+        <p><strong>Drone 3:</strong> Making delivery (Battery at 83%), estimated time to return to the farmacy: 48 minutes</p>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .map-container {
+        width: 85%; /* Ajusta el ancho según tus necesidades */
+    }
+
+    .drones-info {
+        width: 25%; /* Ajusta el ancho según tus necesidades */
+        padding: 20px;
+        border: 1px solid #ddd; /* Estilo opcional para el borde */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra opcional */
+        margin-left: 20px; /* Espacio entre el mapa y la info */
+    }
+</style>
+
+
+
+
+
+
+
+
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    
+
+    
+    
+    
+</footer>
+<!-- End Footer -->
+
+<!-- Start Script -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/templatemo.js"></script>
+<script src="assets/js/custom.js"></script>
+<!-- End Script -->
+
+<!-- Start Slider Script -->
+<script src="assets/js/slick.min.js"></script>
+<script>
+    $('#carousel-related-product').slick({
+        infinite: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        dots: true,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3
+                }
+            }
+        ]
+    });
+</script>
+<!-- End Slider Script -->
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/carrocompra.js"></script>
+<script src="assets/js/server.js"></script>
+<script src="assets/js/admin_estadisticas.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+<script src="assets/js/admin_activity.js"></script>
+
+
+
+<div class="w-100 bg-black py-3">
+    <div class="container">
+        <div class="row pt-2">
+            <div class="col-12">
+                <p class="text-left text-light">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">HOME</a>
+                    </li>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
